@@ -1,0 +1,58 @@
+
+div.price-div{
+    padding: 10px;
+}
+div.price-div > h3{
+    font-weight: 650;
+    color: whitesmoke;
+}
+div.price-div > p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    color: #aaa; 
+}
+
+div.Door{
+    padding: 10px;
+    box-shadow: 2px 2px 8px cornflowerblue;
+    background-image: url("../../assets/infoImg/5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+div.Door>h4{
+    padding-left: 10px;
+    color: whitesmoke;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+button.pos-left{
+    position:absolute;
+    top:8px;
+    right:8px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:whitesmoke;
+    background-color: cornflowerblue;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+div.card-body{
+    background-color: black;
+}
+
+div.card-body > p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    color: #aaa; 
+}
+
+.w-90{
+    width:90%;
+}

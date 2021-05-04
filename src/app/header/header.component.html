@@ -1,0 +1,139 @@
+<header class="naVheader fixed-top fadeIn">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand logo" routerLink="home" href="#"
+        ><i class="fab fa-gofore"></i> GameZone</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <!--<span class="navbar-toggler-icon"></span> -->
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul style="margin-left: 50px" class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li routerLinkActive="active" class="nav-item">
+            <a class="nav-link" routerLink="home" aria-current="page" href="#"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item dropdown" routerLinkActive="active">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Games
+              <i class="fas fa-chevron-down ms-1"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li routerLinkActive="dropDownActive">
+                <a class="dropdown-item" routerLink="play-station" href="#"
+                  ><i class="fab fa-playstation me-3"></i>PlayStation</a
+                >
+              </li>
+              <li routerLinkActive="dropDownActive">
+                <a class="dropdown-item" routerLink="xbox" href="#"
+                  ><i class="fab fa-xbox me-3"></i>Xbox</a
+                >
+              </li>
+              <li routerLinkActive="dropDownActive">
+                <a class="dropdown-item" routerLink="pc" href="#"
+                  ><i class="fas fa-desktop me-3"></i>Pc</a
+                >
+              </li>
+              <li routerLinkActive="dropDownActive">
+                <a class="dropdown-item" routerLink="nitendo" href="#"
+                  ><span
+                    class="iconify me-3"
+                    data-icon="fa-brands:nintendo-switch"
+                    data-inline="false"
+                  ></span
+                  >Nitendo</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li routerLinkActive="active" class="nav-item">
+            <a class="nav-link" routerLink="news" href="#">News</a>
+          </li>
+          <li routerLinkActive="active" class="nav-item">
+            <a class="nav-link" routerLink="about" href="#">About Us</a>
+          </li>
+          <li routerLinkActive="active" class="nav-item">
+            <a class="nav-link" routerLink="contact" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <button
+            *ngIf="!authService.isLoggedIn"
+            id="popUp"
+            routerLink="login"
+            routerLinkActive="loginBtnActive"
+            class="btn btn-popUp"
+            type="button"
+          >
+            <i class="fas me-2 fa-sign-in-alt"></i>Login
+          </button>
+
+          <div
+            *ngIf="authService.isLoggedIn"
+            routerLinkActive="activeAdmin"
+            class="dropdown"
+          >
+            <button
+              class="btn btn-admin dropdown-toggle"
+              id="dropdownMenuAdmin"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-user-shield me-2"></i>MyAdmin<i
+                class="fas fa-chevron-down ms-3"
+              ></i>
+            </button>
+            <ul
+              class="dropdown-menu adminMenuItem"
+              aria-labelledby="dropdownMenuAdmin"
+            >
+              <li routerLinkActive="adminLinkActive">
+                <a class="dropdown-item" routerLink="admin" href="#"
+                  ><i class="fas fa-user-circle me-3"></i>My Profile</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fab fa-gratipay me-3"></i>My Wishlist</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fas fa-cart-plus me-3"></i>My Cart</a
+                >
+              </li>
+              <li>
+                <a
+                  (click)="authService.SignOut()"
+                  class="dropdown-item"
+                  href="#"
+                  ><i class="fas fa-sign-out-alt me-3"></i>Log Out</a
+                >
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>

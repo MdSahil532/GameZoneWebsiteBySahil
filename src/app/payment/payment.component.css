@@ -1,0 +1,78 @@
+
+
+div.payInfoDiv h5 {
+    text-transform: uppercase;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+
+div.payInfoDiv h5 span{
+    color: cornflowerblue;
+    text-transform: capitalize;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+div.paymentMethod span > i{
+    color: whitesmoke;
+    font-size: 35px;
+}
+
+.form-check-input{
+    background-color: black;
+    padding:5px;
+    border: 1px solid cornflowerblue;
+}
+.form-check-input:focus{
+    box-shadow: none;
+}
+.form-check-input:checked{
+    border: 1px solid cornflowerblue;
+   box-shadow: 2px 2px 8px cornflowerblue;
+}
+
+label.form-check-label{
+    color: whitesmoke;
+}
+label.form-check-label > a{
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+button.btn-payGo{
+    border: 1.5px solid cornflowerblue;
+    color: cornflowerblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    border-radius:0;
+    padding: 10px 20px 10px 20px;
+    transition: all .4s ease-in-out;
+}
+button.btn-payGo:hover{
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+hr.payOffRole{
+    width: 100%;
+    height: 3px;
+    background-color: whitesmoke;
+}
+
+p.cashH6{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 3.5rem;
+}
+
+a.btn-CashOn{
+    border: 1.5px solid cornflowerblue;
+    color: cornflowerblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    border-radius:0;
+    padding: 10px 20px 10px 20px;
+    transition: all .4s ease-in-out;
+}
+a.btn-CashOn:hover{
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}

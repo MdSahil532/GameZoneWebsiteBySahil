@@ -1,0 +1,74 @@
+
+
+button.btn-resend{
+
+    border: 1.5px solid whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    background-color: transparent;
+    outline: none;
+    padding: 12px 15px 12px 15px;
+    transition: all .5s ease-in;
+}
+button.btn-resend > i{
+    margin-right: 5px;
+    transition: all .5s ease-in;
+
+}
+button.btn-resend:hover > i{
+    transform: rotate(360deg);
+    color: cornflowerblue;
+}
+
+button.btn-resend:hover{
+    border-color: cornflowerblue;
+    border-width: 1.5px;
+    color: cornflowerblue;
+    box-shadow: 1px 1px 5px cornflowerblue;
+}
+
+button.btn-resend:focus{
+    border: none;
+    box-shadow: none;
+}
+
+span.redirect{
+    cursor: pointer;
+    margin-left: 5px;
+    color: cornflowerblue;
+    font-weight: 600;
+}
+span.redirect:focus{
+    outline: none;
+    border: none;
+}
+
+div.pG{
+    background-color: black;
+    border: 1.5px solid cornflowerblue;
+    box-shadow: 1px 1px 6px cornflowerblue;
+ }
+ 
+ div.toast{
+    background-color: black;
+    padding: 15px;
+    border: 1.5px solid cornflowerblue;
+    box-shadow: 1px 1px 6px cornflowerblue;
+ }
+ 
+ div.toast-body{
+     color: whitesmoke;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ div.errorToast{
+    border: 1.5px solid crimson !important;
+    box-shadow: 1px 1px 6px crimson !important;
+    position: relative;
+ }
+ button.closeBtn{
+     position: absolute;
+     top: 8px !important;
+     right: 1px !important;
+ }
+

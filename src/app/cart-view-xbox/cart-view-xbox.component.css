@@ -1,0 +1,207 @@
+
+
+
+div.calCulate{
+    box-shadow: 1px 1px 8px cornflowerblue;
+}
+
+h5.cal{
+    color: cornflowerblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h5.cal > span{
+    color: #aaa;
+}
+
+
+h5.cal > button {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    outline: none !important;
+    
+}
+
+h5.cal > button:hover{
+    box-shadow: 1px 1px 8px cornflowerblue;
+    color: cornflowerblue;
+}
+
+h5.cal > button:focus{
+    box-shadow: none;
+    box-shadow: 1px 1px 8px cornflowerblue;
+    color: cornflowerblue;
+}
+
+div.cardImg > img{
+    border: 1px solid cornflowerblue;
+    box-shadow: 1px 1px 8px cornflowerblue;
+}
+
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+  
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+
+    span.spanCal2{
+        margin-right: 30px !important;
+    }
+    span.spanCal{
+        margin-right: 20px !important;
+    }
+
+ }
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+    span.spanCal2{
+        margin-right: 30px !important;
+    }
+    span.spanCal{
+        margin-right: 20px !important;
+    }
+
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) { 
+
+    span.spanCal2{
+        margin-right: 30px !important;
+    }
+    span.spanCal{
+        margin-right: 20px !important;
+    }
+
+ }
+
+hr.hrCal{
+    background-color: cornflowerblue;
+    width: 80%;
+    height: 3px;
+}
+
+ div.cardDes{
+
+    background-color: transparent;
+    box-shadow: 1px 1px 8px cornflowerblue;
+
+ }
+
+ div.cardDes > h6 > span{
+     color: whitesmoke !important;
+ }
+
+ div.cardDes > h6{
+     font-family:Arial, Helvetica, sans-serif;
+     color: whitesmoke !important;
+     font-weight: 700;
+ }
+
+ h4.h4Cart{
+     text-transform: uppercase;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ button.btn-proceed{
+     outline: none;
+     border: 2px solid cornflowerblue;
+     color: cornflowerblue;
+     text-align: start;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     transition: all 1s ease-in-out;
+     padding: 15px 0 15px 28px;
+     font-weight: 650;
+     position: relative;
+ }
+ button.btn-proceed:hover{
+     background-color: cornflowerblue;
+     color: whitesmoke;
+ }
+ button.btn-proceed:hover::after{
+    border-color: whitesmoke;
+    transform: rotate(-45deg);
+}
+
+ button.btn-proceed:focus{
+     box-shadow: none;
+ }
+
+ button.btn-proceed::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border: solid cornflowerblue;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    position: absolute;
+    top:24px;
+    right:30px;
+    transition: all 1s ease-in-out;
+ }
+
+ div.toast{
+    background-color: black;
+    padding: 15px;
+    border: 1.5px solid cornflowerblue;
+    box-shadow: 1px 1px 6px cornflowerblue;
+ }
+
+
+ div.toast-body{
+     color: whitesmoke;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+button.btn-close:focus{
+     box-shadow: none !important;
+     border: none;
+ }
+ button.btn-close::after{
+     color: whitesmoke !important;
+ }
+
+ button.btn-cancel{
+     position: relative;
+     text-align: start;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     transition: all 1s ease-in-out;
+     font-weight: 650; 
+     padding: 15px 0 15px 28px;
+     color: whitesmoke;
+     border: 2px solid whitesmoke;
+ }
+
+ button.btn-cancel:hover{
+     color: cornflowerblue;
+     border: 2px solid cornflowerblue;
+ }
+ button.btn-cancel:hover i{
+     color: cornflowerblue;
+     transform: rotate(360deg);
+ }
+ 
+ button.btn-cancel > i{
+     position: absolute;
+     top: 18px;
+     right: 28px;
+     transition: all 1s ease-in-out;
+ }
+
+ button.btn-cancel:focus{
+     box-shadow: none !important;
+ }
+ 

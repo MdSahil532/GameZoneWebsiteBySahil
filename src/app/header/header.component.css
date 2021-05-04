@@ -1,0 +1,159 @@
+
+a.logo > i.fa-gofore{
+    color: cornflowerblue;
+    font-size: 30px;
+    padding: 20px;
+    text-shadow: 2px 2px 8px cornflowerblue;
+    box-shadow:  2px 2px 8px cornflowerblue;
+    background-color: transparent;
+    border-radius: 50%;	
+}
+a.logo{
+    color: cornflowerblue !important;
+    font-size: 22px;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.btn-popUp{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    box-shadow: 2px 2px 8px whitesmoke;
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-popUp:hover{
+  color: cornflowerblue;
+  box-shadow: 2px 2px 8px cornflowerblue;
+  border: 2px solid cornflowerblue;  
+}
+header.naVheader{
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 1em cornflowerblue;
+    background-image: url("../../assets/infoImg/5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.nav-item{
+    margin-left: 30px;
+}
+li.active a.nav-link{
+    color: cornflowerblue  !important;
+    font-weight: bold;
+}
+
+a.nav-link {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+a.nav-link:hover {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+a.nav-link:focus{
+    color: cornflowerblue;
+    font-weight: bold;
+}
+li > a.dropdown-item{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  
+}
+li > a.dropdown-item:hover{
+    background-color: transparent;
+    color: cornflowerblue;
+}
+
+ul.dropdown-menu{
+    background-color: black;
+    box-shadow: 2px 2px 8px cornflowerblue;
+}
+
+li.dropDownActive > a{
+    background-color: transparent !important;
+    color: cornflowerblue !important;
+}
+
+button.loginBtnActive{
+  color: cornflowerblue !important;
+  box-shadow: 2px 2px 8px cornflowerblue !important;
+  border: 2px solid cornflowerblue !important;  
+}
+
+button.navbar-toggler{
+    outline: none;
+    box-shadow: 1px 1px 5px cornflowerblue;
+}
+button.navbar-toggler:focus{
+    box-shadow: none;
+    box-shadow: 1px 1px 5px cornflowerblue;
+}
+.bar{
+     width: 30px;
+     height:2px;
+     box-shadow: 1px 1px 5px cornflowerblue;
+     background-color:cornflowerblue;
+     margin: 5px 0;
+     transition: 0.4s;
+}
+
+button.btn-admin{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1.5px solid whitesmoke;
+    color: whitesmoke;
+    padding: 8px 15px 8px 15px;
+    transition: all .5s ease-in;
+}
+button.btn-admin:hover > i.fa-user-shield{
+    transform: rotate(360deg);
+    color: cornflowerblue;
+}
+button.btn-admin > i.fa-user-shield{
+    transition: all .5s ease-in;
+}
+
+button.btn-admin:hover{
+    box-shadow: 1px 1px 8px cornflowerblue;
+    border: 1.5px solid cornflowerblue;
+    color: cornflowerblue;
+}
+button.btn-admin:focus{
+    box-shadow: 1px 1px 8px cornflowerblue;
+    border: 1.5px solid cornflowerblue;
+    color: cornflowerblue;
+}
+
+
+ul.adminMenuItem{
+    box-shadow: none !important;
+    border: 1.5px solid cornflowerblue !important;
+}
+
+ul.adminMenuItem li a.dropdown-item{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ul.adminMenuItem li a.dropdown-item:hover i{
+    transform: rotate(360deg);
+    color: cornflowerblue;
+}
+ul.adminMenuItem li a.dropdown-item i{
+    transition: all .5s ease-in;
+}
+
+button.dropdown-toggle::after , a.dropdown-toggle::after{
+    display: none !important;
+}
+
+div.activeAdmin button.btn-admin {
+    box-shadow: 1px 1px 8px cornflowerblue;
+    border: 1.5px solid cornflowerblue;
+    color: cornflowerblue;
+}
+
+li.adminLinkActive a.dropdown-item {
+    background-color: transparent !important;
+    color: cornflowerblue !important;
+}

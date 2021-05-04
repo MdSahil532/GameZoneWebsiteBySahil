@@ -1,0 +1,604 @@
+<div
+  *ngIf="val == 1"
+  class="container"
+  style="margin-top: 300px; margin-bottom: 200px"
+>
+  <div class="row">
+    <div class="d-flex justify-content-center col-12">
+      <div class="spinner-grow cornColor mr-15" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow cornColor mr-15" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow cornColor mr-15" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow cornColor mr-15" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow cornColor" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  *ngIf="val == 2"
+  class="conatiner-fluid mb-100 fadeIn"
+  style="margin-top: 120px"
+>
+  <div class="row">
+    <div class="col-12 mx-auto nitendoBanner bg-pattern fadeIn"></div>
+  </div>
+</div>
+
+<div *ngIf="val == 2" class="container fadeIn" style="margin-bottom: 80px">
+  <div class="row">
+    <h2 id="nitendoHead" class="col-12 mx-auto text-center text-light mb-4 p-3">
+      <span
+        class="iconify mr-10"
+        data-icon="fa-brands:nintendo-switch"
+        data-inline="true"
+        data-width="45px"
+        data-height="45px"
+      ></span
+      >Games For Nitendo
+    </h2>
+
+    <ul
+      class="col-12 mb-5 justify-content-center nav nav-pills mb-3"
+      id="pills-tab"
+      role="tablist"
+    >
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="nit-adven-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#nit-adven"
+          type="button"
+          role="tab"
+          aria-controls="nit-adven"
+          aria-selected="true"
+        >
+          Adventure
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="nit-action-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#nit-action"
+          type="button"
+          role="tab"
+          aria-controls="nit-action"
+          aria-selected="false"
+        >
+          Action
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="nit-fps-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#nit-fps"
+          type="button"
+          role="tab"
+          aria-controls="nit-fps"
+          aria-selected="false"
+        >
+          Fps
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="nit-rpg-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#nit-rpg"
+          type="button"
+          role="tab"
+          aria-controls="nit-rpg"
+          aria-selected="false"
+        >
+          Rpg
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="nit-racing-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#nit-racing"
+          type="button"
+          role="tab"
+          aria-controls="nit-racing"
+          aria-selected="false"
+        >
+          Racing
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="nit-spa-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#nit-spa"
+          type="button"
+          role="tab"
+          aria-controls="nit-spa"
+          aria-selected="false"
+        >
+          Sports
+        </button>
+      </li>
+    </ul>
+
+    <div class="col-12 tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="nit-adven"
+        role="tabpanel"
+        aria-labelledby="nit-adven-tab"
+      >
+        <div class="row">
+          <div
+            *ngFor="let adNitGame of adventureGames"
+            class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4"
+          >
+            <div
+              class="w-100 h-100 mx-auto p-3 productDiv"
+              [routerLink]="['/nitendo-order', adNitGame.id]"
+            >
+              <img
+                src="../../assets/infoImg/nit games/adventureGames/{{
+                  adNitGame.img
+                }}"
+                alt=""
+                class=""
+                class="mx-auto w-100 d-block mb-4 mt-2"
+              />
+              <h5 class="text-light mb-3">{{ adNitGame.name }}</h5>
+              <p>
+                <span>Price: </span><i class="fas fa-rupee-sign"></i
+                >{{ adNitGame.price }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-lg-center">
+                <li class="page-item mr-10 active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">4</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">5</a>
+                </li>
+                <li class="page-item me-1">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+                <li class="p-2 lText"><span>365 Items</span></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <select
+              class="form-select mx-lg-auto"
+              aria-label="Default select example"
+            >
+              <option class="opColor" selected>Sort by popularity</option>
+              <option class="opColor" value="1">Sort by latest</option>
+              <option class="opColor" value="2">
+                Sort by price: low to high
+              </option>
+              <option class="opColor" value="3">
+                Sort by price: high to low
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="nit-action"
+        role="tabpanel"
+        aria-labelledby="nit-action-tab"
+      >
+        <div class="row">
+          <div
+            *ngFor="let acNitGame of actionGames"
+            class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4"
+          >
+            <div
+              class="w-100 h-100 mx-auto p-3 productDiv"
+              [routerLink]="['/nitendo-order', acNitGame.id]"
+            >
+              <img
+                src="../../assets/infoImg/nit games/actionGames/{{
+                  acNitGame.img
+                }}"
+                alt=""
+                class=""
+                class="mx-auto w-100 d-block mb-4 mt-2"
+              />
+              <h5 class="text-light mb-3">{{ acNitGame.name }}</h5>
+              <p>
+                <span>Price: </span><i class="fas fa-rupee-sign"></i
+                >{{ acNitGame.price }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-lg-center">
+                <li class="page-item mr-10 active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">4</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">5</a>
+                </li>
+                <li class="page-item me-1">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+                <li class="p-2 lText"><span>275 Items</span></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <select
+              class="form-select mx-lg-auto"
+              aria-label="Default select example"
+            >
+              <option class="opColor" selected>Sort by popularity</option>
+              <option class="opColor" value="1">Sort by latest</option>
+              <option class="opColor" value="2">
+                Sort by price: low to high
+              </option>
+              <option class="opColor" value="3">
+                Sort by price: high to low
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="nit-fps"
+        role="tabpanel"
+        aria-labelledby="nit-fps-tab"
+      >
+        <div class="row">
+          <div
+            *ngFor="let fpsNitGame of fpsGames"
+            class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4"
+          >
+            <div
+              class="w-100 h-100 mx-auto p-3 productDiv"
+              [routerLink]="['/nitendo-order', fpsNitGame.id]"
+            >
+              <img
+                src="../../assets/infoImg/nit games/fpsGames/{{
+                  fpsNitGame.img
+                }}"
+                alt=""
+                class=""
+                class="mx-auto w-100 d-block mb-4 mt-2"
+              />
+              <h5 class="text-light mb-3">{{ fpsNitGame.name }}</h5>
+              <p>
+                <span>Price: </span><i class="fas fa-rupee-sign"></i
+                >{{ fpsNitGame.price }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-lg-center">
+                <li class="page-item mr-10 active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">4</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">5</a>
+                </li>
+                <li class="page-item me-1">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+                <li class="p-2 lText"><span>205 Items</span></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <select
+              class="form-select mx-lg-auto"
+              aria-label="Default select example"
+            >
+              <option class="opColor" selected>Sort by popularity</option>
+              <option class="opColor" value="1">Sort by latest</option>
+              <option class="opColor" value="2">
+                Sort by price: low to high
+              </option>
+              <option class="opColor" value="3">
+                Sort by price: high to low
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="nit-rpg"
+        role="tabpanel"
+        aria-labelledby="nit-rpg-tab"
+      >
+        <div class="row">
+          <div
+            *ngFor="let rpgNitGame of rpgGames"
+            class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4"
+          >
+            <div
+              class="w-100 h-100 mx-auto p-3 productDiv"
+              [routerLink]="['/nitendo-order', rpgNitGame.id]"
+            >
+              <img
+                src="../../assets/infoImg/nit games/rpgGames/{{
+                  rpgNitGame.img
+                }}"
+                alt=""
+                class=""
+                class="mx-auto w-100 d-block mb-4 mt-2"
+              />
+              <h5 class="text-light mb-3">{{ rpgNitGame.name }}</h5>
+              <p>
+                <span>Price: </span><i class="fas fa-rupee-sign"></i
+                >{{ rpgNitGame.price }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-lg-center">
+                <li class="page-item mr-10 active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">4</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">5</a>
+                </li>
+                <li class="page-item me-1">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+                <li class="p-2 lText"><span>425 Items</span></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <select
+              class="form-select mx-lg-auto"
+              aria-label="Default select example"
+            >
+              <option class="opColor" selected>Sort by popularity</option>
+              <option class="opColor" value="1">Sort by latest</option>
+              <option class="opColor" value="2">
+                Sort by price: low to high
+              </option>
+              <option class="opColor" value="3">
+                Sort by price: high to low
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="nit-racing"
+        role="tabpanel"
+        aria-labelledby="nit-racing-tab"
+      >
+        <div class="row">
+          <div
+            *ngFor="let rcaNitGame of racingGames"
+            class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4"
+          >
+            <div
+              class="w-100 h-100 mx-auto p-3 productDiv"
+              [routerLink]="['/nitendo-order', rcaNitGame.id]"
+            >
+              <img
+                src="../../assets/infoImg/nit games/racingGames/{{
+                  rcaNitGame.img
+                }}"
+                alt=""
+                class=""
+                class="mx-auto w-100 d-block mb-4 mt-2"
+              />
+              <h5 class="text-light mb-3">{{ rcaNitGame.name }}</h5>
+              <p>
+                <span>Price: </span><i class="fas fa-rupee-sign"></i
+                >{{ rcaNitGame.price }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-lg-center">
+                <li class="page-item mr-10 active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">4</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">5</a>
+                </li>
+                <li class="page-item me-1">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+                <li class="p-2 lText"><span>275 Items</span></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <select
+              class="form-select mx-lg-auto"
+              aria-label="Default select example"
+            >
+              <option class="opColor" selected>Sort by popularity</option>
+              <option class="opColor" value="1">Sort by latest</option>
+              <option class="opColor" value="2">
+                Sort by price: low to high
+              </option>
+              <option class="opColor" value="3">
+                Sort by price: high to low
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="nit-spa"
+        role="tabpanel"
+        aria-labelledby="nit-spa-tab"
+      >
+        <div class="row">
+          <div
+            *ngFor="let spaNitGame of sportsGames"
+            class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4"
+          >
+            <div
+              class="w-100 h-100 mx-auto p-3 productDiv"
+              [routerLink]="['/nitendo-order', spaNitGame.id]"
+            >
+              <img
+                src="../../assets/infoImg/nit games/sportGames/{{
+                  spaNitGame.img
+                }}"
+                alt=""
+                class=""
+                class="mx-auto w-100 d-block mb-4 mt-2"
+              />
+              <h5 class="text-light mb-3">{{ spaNitGame.name }}</h5>
+              <p>
+                <span>Price: </span><i class="fas fa-rupee-sign"></i
+                >{{ spaNitGame.price }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-lg-center">
+                <li class="page-item mr-10 active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">4</a>
+                </li>
+                <li class="page-item mr-10">
+                  <a class="page-link" href="#">5</a>
+                </li>
+                <li class="page-item me-1">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+                <li class="p-2 lText"><span>165 Items</span></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+            <select
+              class="form-select mx-lg-auto"
+              aria-label="Default select example"
+            >
+              <option class="opColor" selected>Sort by popularity</option>
+              <option class="opColor" value="1">Sort by latest</option>
+              <option class="opColor" value="2">
+                Sort by price: low to high
+              </option>
+              <option class="opColor" value="3">
+                Sort by price: high to low
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

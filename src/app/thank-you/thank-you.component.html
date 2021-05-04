@@ -1,0 +1,43 @@
+
+<div *ngIf="val==1" class="conatainer " style="margin-top:300px; margin-bottom: 200px;">
+
+    <div class="row">
+
+        <div  class="d-flex justify-content-center col-12">
+
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+<div *ngIf="val==2"  class="container fadeIn" style="margin-top: 200px; margin-bottom: 100px;" >
+
+    <div class="row">
+
+        <div class="col-lg-9 col-12 col-sm-12 col-md-11 mx-auto">
+
+            <h1 class="text-light col-12 p-3 text-center thankText mb-5">Thank You For Choosing us!</h1>
+            <h1 class="text-light col-12 p-3 text-center successText mb-70"><i class="fas fa-check-double"></i></h1>
+            <h4 class="text-light col-12 p-3 text-lg-center text-md-center mb-4 reqText">Your request has been Accepted*</h4>
+            <h6 class="text-light col-12 p-3 infoOrder">You have successfully order product<i class="fas fa-angle-double-right mx-2"></i> <span>{{orderPName}}</span>, quantity<i class="fas fa-angle-double-right mx-2" ></i> <span>{{orderPQuan}}</span> and price<i class="fas fa-angle-double-right mx-2" ></i> <span><i class="fas fa-rupee-sign me-1"></i>{{orderPPrice}}</span> through cash on delivery method.</h6>
+            <p class="text-light col-12getText  px-3">We have sent a mail to your provided email address. Kindly check your email address to get details about further cash on delivery process, date and time.</p>
+        </div>
+    </div>
+
+</div>

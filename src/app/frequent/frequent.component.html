@@ -1,0 +1,201 @@
+
+
+
+<div *ngIf="val==1" class="container" style="margin-top: 300px; margin-bottom: 200px;">
+
+  <div class="row">
+
+      <div  class="d-flex justify-content-center col-12">
+
+          <div class="spinner-grow cornColor mr-15" role="status">
+              <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow cornColor mr-15" role="status">
+              <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow cornColor mr-15" role="status">
+              <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow cornColor mr-15" role="status">
+              <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow cornColor" role="status">
+              <span class="visually-hidden">Loading...</span>
+          </div>  
+      </div>
+
+  </div>
+
+</div>
+
+
+
+
+<div  *ngIf="val==2" class="container fadeIn" style="margin-top: 200px; margin-bottom: 100px;">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-5" style="font-weight: 650; color: whitesmoke;">Frequently Asked Questions</h1>
+
+            <h3 class="mb-2" style="font-weight: 650; color: whitesmoke;">General Questions</h3>
+            <div class="freq-div mb-4">
+                <div class="Door mb-4 ">
+                    <h4 class="w-90">Which countries do you sell to?</h4>
+                    <button id="b1" (click)="plusMinus('b1');"  class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape" aria-expanded="false" aria-controls="FreqCollape">+</button>
+                    <div class="collapse" id="FreqCollape">
+                      <div class="card card-body">
+                        <p>Since we are a digital only website we are able to sell instantly to any country in the world.</p> 
+                      </div>
+                    </div>  
+                </div>
+                <div class="Door mb-4 ">
+                    <h4 class="w-90" >Will I get a physical copy of the product?</h4>
+                    <button id="b2" (click)="plusMinus('b2');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape1" aria-expanded="false" aria-controls="FreqCollape1">+</button>
+                    <div class="collapse" id="FreqCollape1">
+                      <div class="card card-body">
+                        <p>Sorry, for ease of use and to provide the best service we currently only sell the digital version of products.</p> 
+                        <p>No physical products like boxes, DVDs, or Blu Rays will be delivered. Instead, you will receive digital activation codes. All you need to do is redeem the code in the appropriate platform mentioned on the product page.</p>
+                      </div>
+                    </div>  
+                </div>
+                <div class="Door mb-4 ">
+                    <h4 class="w-90">Why are your products so cheap?</h4>
+                    <button id="b3" (click)="plusMinus('b3');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape2" aria-expanded="false" aria-controls="FreqCollape2">+</button>
+                    <div class="collapse" id="FreqCollape2">
+                      <div class="card card-body">
+                        <p>We have over 5 years of experience within the gaming industry with an extensive network of suppliers and contacts to source products. We buy from all corners of the globe to ensure the cheapest possible prices and as we only sell products in digital form we’re able to make significant savings on postage and related expenses – we then pass these reductions on to you, which ensures our pricing is the most competitive around!</p> 
+                      </div>
+                    </div>  
+                </div>
+                <div class="Door mb-4 ">
+                    <h4 class="w-90">The price changed from a few days ago, can I get a refund on the difference?</h4>
+                    <button id="b4" (click)="plusMinus('b4');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape3" aria-expanded="false" aria-controls="FreqCollape3">+</button>
+                    <div class="collapse" id="FreqCollape3">
+                      <div class="card card-body">
+                        <p>We always strive to offer you the best prices on our products. However, we sometimes need to adjust our prices due to cost changes from our suppliers. As a result, we cannot guarantee that prices remain the same and we are unable to offer a refund for the price difference.</p> 
+                      </div>
+                    </div>  
+                </div>
+                <div class="Door ">
+                    <h4 class="w-90">The game price is cheaper / lower in another site, can you match their price?</h4>
+                    <button id="b5" (click)="plusMinus('b5');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape4" aria-expanded="false" aria-controls="FreqCollape4">+</button>
+                    <div class="collapse" id="FreqCollape4">
+                      <div class="card card-body">
+                        <p>We always strive to offer the lowest possible prices on our website. However, we do not specifically price-match with any other site.</p> 
+                      </div>
+                    </div>  
+                </div>
+
+            </div>
+
+            <h3 class="mb-2" style="font-weight: 650; color: whitesmoke;">Activation Code Related</h3>
+            <div class="freq-div mb-4">
+
+              <div class="Door mb-4 ">
+                <h4 class="w-90">Are the keys/activation codes offered on your website official?</h4>
+                <button id="b6" (click)="plusMinus('b6');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape5" aria-expanded="false" aria-controls="FreqCollape5">+</button>
+                <div class="collapse" id="FreqCollape5">
+                  <div class="card card-body">
+                    <p>Yes, all keys/activation codes offered on DealStore.io are official and are purchased from authorized resellers or scanned from actual official physical releases.</p> 
+                    <p>All keys can be redeemed on their official platforms, such as Steam, Origin, Battle.net etc.</p>
+                  </div>
+                </div>  
+              </div>
+
+              <div class="Door mb-4 ">
+                <h4 class="w-90">I’ve never purchased a game key before, is this legal and how do I download it?</h4>
+                <button id="b7" (click)="plusMinus('b7');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape6" aria-expanded="false" aria-controls="FreqCollape6">+</button>
+                <div class="collapse" id="FreqCollape6">
+                  <div class="card card-body">
+                    <p>Downloading games using official platforms such as Steam, Origin, Battle.net etc. is completely legal. While each platform differs slightly in how to download games you typically enter the activation code that you received into the respective platform and download will start automatically.</p> 
+                    <p>For detailed instructions please refer to our <a href="" routerLink="../activation">activation guides</a>.</p>
+                  </div>
+                </div>  
+              </div>
+
+              <div class="Door mb-4 ">
+                <h4 class="w-90">How long does it take to receive my product key/activation code?</h4>
+                <button id="b8" (click)="plusMinus('b8');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape7" aria-expanded="false" aria-controls="FreqCollape7">+</button>
+                <div class="collapse" id="FreqCollape7">
+                  <div class="card card-body">
+                    <p>We have two delivery methods. Each product on our website contains information regarding the delivery method.</p> 
+                    <p>Instant email delivery – Your purchased keys will be delivered by email instantly.</p>
+                    <p>Standard email delivery – Your purchased keys will be delivered by email within 24 hours.</p>
+                    <p>If for some reason you do not receive it please check your junk email folder to make sure it wasn’t accidentally placed there. If there is any fraudulent behavior detected on your order such as using a web proxy, your key delivery will be delayed until it can be manually reviewed, this typically takes up to 24 hours.</p>
+                  </div>
+                </div>  
+              </div>
+
+              
+              <div class="Door mb-4 ">
+                <h4 class="w-90">I’m having trouble activating my key, it’s not working!</h4>
+                <button id="b9" (click)="plusMinus('b9');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape8" aria-expanded="false" aria-controls="FreqCollape8">+</button>
+                <div class="collapse" id="FreqCollape8">
+                  <div class="card card-body">
+                    <p>If you receive an error while activating your product please send an email to support@GameZone.io, this will automatically create a ticket and we can investigate your problem asap. To help expedite a solution please attach a screenshot with the error that you are experiencing.</p>  
+                  </div>
+                </div>  
+              </div>
+              
+              <div class="Door ">
+                <h4 class="w-90">Are the keys valid in all regions?</h4>
+                <button id="b10" (click)="plusMinus('b10');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape9" aria-expanded="false" aria-controls="FreqCollape9">+</button>
+                <div class="collapse" id="FreqCollape9">
+                  <div class="card card-body">
+                   <p>While we stock primarily global/region free keys, please check the region field on the product page, there are sometimes restrictions on where the product can be activated.</p>
+                  </div>
+                </div>  
+              </div>
+
+            </div>
+
+            <h3 class="mb-2" style="font-weight: 650; color: whitesmoke;">Order Related</h3>
+            <div class="freq-div mb-4">
+
+              <div class="Door mb-4 ">
+                <h4 class="w-90">I ordered a product with standard email delivery, when will I receive my order?</h4>
+                <button id="b11" (click)="plusMinus('b11');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape10" aria-expanded="false" aria-controls="FreqCollape10">+</button>
+                <div class="collapse" id="FreqCollape10">
+                  <div class="card card-body">
+                   <p>All standard email delivery products are delivered within 24 hours after purchase.</p>
+                   <p>If you haven’t received your order in 24 hours (standard email delivery), your order may have been delivered to the wrong email address. If that is the case simply contact us at <a href="">support@GameZone.io</a> with the details of your order and we will gladly help you out.</p>
+                  </div>
+                </div>  
+              </div>
+
+              <div class="Door mb-4 ">
+                <h4 class="w-90">I ordered a product with instant email delivery but didn’t receive my order instantly.</h4>
+                <button id="b12" (click)="plusMinus('b12');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape11" aria-expanded="false" aria-controls="FreqCollape11">+</button>
+                <div class="collapse" id="FreqCollape11">
+                  <div class="card card-body">
+                   <p>All instant email delivery products are delivered instantly after purchase.</p>
+                   <p>If you didn’t receive your order instantly (instant email delivery), your order may have been delivered to the wrong email address. If that is the case simply contact us at <a href="">support@GameZone.io</a> with the details of your order and we will gladly help you out.</p>
+                  </div>
+                </div>  
+              </div>
+
+              <div class="Door mb-4">
+                <h4 class="w-90">I’ve changed my mind, can I cancel my order?</h4>
+                <button id="b13" (click)="plusMinus('b13');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape12" aria-expanded="false" aria-controls="FreqCollape12">+</button>
+                <div class="collapse" id="FreqCollape12">
+                  <div class="card card-body">
+                   <p>Please refer to our <a href="" routerLink="../refund">refund policy</a> for more details regarding order cancellations.</p>
+                  </div>
+                </div>  
+              </div>
+
+              <div class="Door ">
+                <h4 class="w-90">My order was rejected because of fraudulent activity, why?</h4>
+                <button id="b14" (click)="plusMinus('b14');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#FreqCollape13" aria-expanded="false" aria-controls="FreqCollape13">+</button>
+                <div class="collapse" id="FreqCollape13">
+                  <div class="card card-body">
+                   <p>There are many reasons why an order might be rejected due to suspected fraudulent activity but the number one reason for most rejected orders is the use of a web proxy. A web proxy is the number one tool used by people committing fraud on the internet since it makes them harder to track. Because of this we automatically reject any orders that are made while using a web proxy.</p>
+                   <p>If you feel your order was unfairly rejected then please get in touch with us at <a href="">support@GameZone.io</a> and we will work with you further to determine the reasons for your rejected order.</p>
+                  </div>
+                </div>  
+              </div>
+
+            </div>
+            <h5 style="color: whitesmoke;">For pricing and payment related questions please refer to <a href="" routerLink="../pricing">this page</a>.</h5>
+        </div>
+    </div>
+</div>

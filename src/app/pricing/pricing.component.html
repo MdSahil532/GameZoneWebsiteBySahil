@@ -1,0 +1,97 @@
+
+<div *ngIf="val==1" class="container" style="margin-top: 300px; margin-bottom: 200px;">
+
+    <div class="row">
+
+        <div  class="d-flex justify-content-center col-12">
+
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<div *ngIf="val==2" class="container fadeIn" style="margin-top: 200px; margin-bottom: 100px;">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4" style="font-weight: 650; color: whitesmoke;">Pricing & Payments</h1>
+            <div class="price-div mb-3">
+                <h5 style="color: #aaa;">Last updated January 12, 2021</h5>    
+            </div>
+            <div class="price-div mb-3">
+                <h3 class="mb-3">Pricing Terms</h3>
+                <p>Prices of products may change at our discretion.</p>
+                <p>Registration on the website is free. GameZone.io does not charge any fee for browsing and buying. GameZone.io may at its sole discretion introduce any new services and modify some or all of the existing services offered. Changes in context of the Fees and related policies shall automatically become effective immediately once implemented. You shall be solely responsible for compliance of all applicable laws including those applicable for India for performing any transaction online.</p>
+
+            </div>
+            <div class="price-div mb-3">
+                <h3 class="mb-3">Currency</h3>
+                <p>The default currency is INR – Indian Rupee.</p>
+                <p>We currently accept payments only in INR – Indian Rupee.</p>  
+            </div>
+
+            <div class="price-div mb-4">
+                <h3 class="mb-3">Payment Methods</h3>
+                <p>We support a great variety of payment methods in order to provide the best services and satisfy all of our customers. Therefore you can select from Debit and Credit Cards, Net Banking, UPI or Mobile Wallets, and more.</p>
+            </div>
+
+            <h3 style="font-weight: 650; color: whitesmoke;" class="mb-4">Frequently Asked Questions</h3>
+
+            <div class="price-div">
+
+                <div class="Door mb-4 ">
+                    <h4 class="w-90">What payment gateways do we use?</h4>
+                    <button id="pb0" (click)="up_down('pb0');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">+</button>
+                    <div class="collapse" id="collapseExample">
+                      <div class="card card-body">
+                        <p>Cashfree and PayPal</p> 
+                      </div>
+                    </div>  
+                </div>
+
+                <div class="Door mb-4 ">
+                    <h4 class="w-90">Are there any hidden charges (Octroi or Sales Tax) when I make a purchase?</h4>
+                    <button id="pb1" (click)="up_down('pb1');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">+</button>
+                    <div class="collapse" id="collapseExample2">
+                      <div class="card card-body">
+                          <p>There are no hidden charges when you make a purchase on our site. The prices listed for all the items are final and all-inclusive. The price you see on the product page is exactly what you pay.</p>
+                      </div>
+                    </div> 
+                </div>
+
+                <div class="Door ">
+                    <h4 class="w-90">What steps do we take to prevent card fraud?</h4>
+                    <button id="pb2" (click)="up_down('pb2');" class="pos-left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample2">+</button>
+                    <div class="collapse" id="collapseExample3">
+                      <div class="card card-body">
+                        <p>We realize the importance of strong fraud detection and resolution capability. We and our online payments partners monitor transactions continuously for suspicious activity and flag potentially fraudulent transactions for manual verification by our team.</p>
+                        <p>In the rarest of rare cases, when our team is unable to rule out the possibility of fraud categorically, the transaction is kept on hold, and the customer is requested to provide identity documents. The ID documents help us ensure that the purchases were indeed made by a genuine card-holder. We apologize for any inconvenience that may be caused to customers and ask them to bear with us in the larger interest of ensuring a safe and secure environment for online transactions.</p>
+                      </div>
+                    </div> 
+                </div>
+
+            </div>
+
+        
+        </div>
+    </div>
+</div>

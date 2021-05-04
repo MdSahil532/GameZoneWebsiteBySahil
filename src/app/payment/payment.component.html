@@ -1,0 +1,81 @@
+
+
+
+<div *ngIf="val==1" class="conatainer " style="margin-top:300px; margin-bottom: 200px;">
+
+    <div class="row">
+
+        <div  class="d-flex justify-content-center col-12">
+
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div *ngIf="val==2" class="container" style="margin-top: 200px; margin-bottom: 100px;">
+
+    <div class="row">
+
+        <div class="p-3 col-lg-8 col-md-10 col-12 col-sm-12 mx-auto payInfoDiv mb-5">
+
+            <h5 class="text-light mb-5 p-2">Product<i class="fas fa-angle-double-right mx-3 mx-lg-5 mx-md-5"></i><span>{{productPName}}.</span></h5>
+            <h5 class="text-light mb-5 p-2">Quantity<i class="fas fa-angle-double-right mx-3 mx-lg-5 mx-md-5"></i><span>{{prodQuantity}}.</span></h5>
+            <h5 class="text-light p-2">Price<i class="fas fa-angle-double-right mx-3 mx-lg-5 mx-md-5"></i><span><i class="fas fa-rupee-sign me-1"></i>{{totalPrice}}.</span></h5>
+        </div>
+
+        <div class="mx-auto col-lg-8 col-md-10 col-12 col-sm-12 p-3 mb-4">
+
+            <h5 class="text-light mb-4 p-2" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Pay securely via Card, Net Banking or UPI.</h5>
+
+            <div class="w-100 d-flex p-3 justify-content-start paymentMethod">
+
+                <span class="me-4 me-lg-5 me-md-5"><i class="fab fa-cc-visa"></i></span>
+                <span class="me-4 me-lg-5 me-md-5" ><i class="fab fa-cc-mastercard"></i></span>
+                <span class="me-4 me-lg-5 me-md-5"><i class="fab fa-cc-paypal"></i></span>
+                <span class="me-4 me-lg-5 me-md-5"><i class="fab fa-google-pay"></i></span>
+                <span ><i class="fab fa-amazon-pay"></i></span>
+
+            </div>
+
+        </div>
+
+        <div class="mx-auto col-lg-8 col-md-10 col-12 col-sm-12 p-3 mb-5">
+
+            <div class="form-check w-100 mb-4 mx-auto">
+                <input (click)="acceptOrnot();" class="form-check-input" [checked]="isAgree" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                <label class="form-check-label" for="checkboxNoLabel"> I agree to the website <a href="" routerLink="/terms">terms and conditions *</a></label>
+                <div *ngIf="!isAgree" class="text-danger mt-3">You must accept the terms and conditions</div>
+            </div>
+            <button class="btn btn-payGo" [disabled]="!isAgree">Proceed to payment</button>
+
+        </div>
+
+        <div class="mx-auto col-lg-8 col-md-10 col-12 col-sm-12">
+            <hr class="payOffRole mb-5">
+            <div class="w-100">
+                <p class="text-light cashH6">We have cash on delivery service<i class="fas fa-angle-double-right mx-2 mx-sm-2 mx-lg-4 mx-md-3"></i><a href="" [routerLink]="['/cash-on-delivery',productPName, prodQuantity, totalPrice]" class="btn btn-CashOn ">Proceed with cash on delivery</a></p>
+            </div>
+        </div>
+        
+
+    </div>
+
+</div>

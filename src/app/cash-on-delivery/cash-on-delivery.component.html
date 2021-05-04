@@ -1,0 +1,127 @@
+
+
+<div *ngIf="val==1" class="conatainer " style="margin-top:300px; margin-bottom: 200px;">
+
+    <div class="row">
+
+        <div  class="d-flex justify-content-center col-12">
+
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+
+<div *ngIf="val==2"  class="container fadeIn" style="margin-top: 200px; margin-bottom: 100px;">
+
+    <div class="row">
+
+        <h2 class="col-12 p-2 text-light text-center cashText mb-4">Cash On Delivery</h2>
+        <hr class="billRole col-lg-8 col-12 col-sm-12 col-md-12 mx-auto mb-4">
+
+        <div class="col-lg-8 col-md-12 col-12 col-sm-12 mx-auto">
+
+            <form  [formGroup]="form" (ngSubmit)="submit()" class="w-100 p-lg-4 mx-auto">
+
+                <div class="row g-3 cashDiv">
+
+                      <h5 class="col-12 mb-5 text-light payWithh5">*Pay with cash upon delivery.</h5>
+                      <div class="col-12 mb-3">
+                        <label for="inputAddress" class="form-label">Address<i>*</i></label>
+                        <input (keyup)="hideToast();" formControlName="address" type="text" class="form-control" id="inputAddress" required>
+                        <div *ngIf="f.address.touched && f.address.invalid" class="mt-3">
+                            <div *ngIf="f.address.errors.required" class="text-danger errorMsg">Address is required.</div>
+                        </div>
+                      </div>
+
+                      <div class="col-12 mb-3">
+                        <label for="inputAddress2" class="form-label">Address 2</label>
+                        <input type="text"  (keyup)="hideToast();" class="form-control" id="inputAddress2" >
+                      </div>
+
+                      <div class="col-md-5 mb-3 mb-lg-0">
+                        <label for="inputCity" class="form-label">City<i>*</i></label>
+                        <input (keyup)="hideToast();" formControlName="city" type="text" class="form-control" id="inputCity" required>
+                        <div *ngIf="f.city.touched && f.city.invalid" class="mt-3">
+                            <div *ngIf="f.city.errors.required" class="text-danger errorMsg">City is required.</div>
+                            <div *ngIf="f.city.errors.pattern" class="text-danger errorMsg">Invalid city name.</div>
+                        </div>
+                        
+                      </div>
+
+                      <div class="col-md-4 mb-3 mb-lg-0">
+                        <label for="inputState" class="form-label">State<i>*</i></label>
+                        <select id="inputState" (change)="hideToast();" formControlName="state" class="form-select" required>
+                          <option selected>Choose...</option>
+                          <option *ngFor="let sta of states">{{sta}}</option>
+                        </select>
+                        <div *ngIf="f.state.touched && f.state.invalid" class="mt-3">
+                            <div *ngIf="f.state.errors.required" class="text-danger errorMsg">State is required.</div>
+                            <div *ngIf="f.state.errors.invalidState" class="text-danger errorMsg">Pls choose a state.</div>
+                        </div>
+                        
+                      </div>
+
+                      <div class="col-md-3">
+                        <label for="inputZip" class="form-label">Pincode<i>*</i></label>
+                        <input  (keyup)="hideToast();" formControlName="zip" type="text" class="form-control" id="inputZip" required>
+                        <div *ngIf="f.zip.touched && f.zip.invalid" class="mt-3">
+                            <div *ngIf="f.zip.errors.required" class="text-danger errorMsg">Pincode is required.</div>
+                            <div *ngIf="f.zip.errors.pattern" class="text-danger errorMsg">Invalid pincode format.</div>
+                        </div>
+                      </div>
+
+                      <div class="form-check col-12 mt-5 mx-auto">
+                        <input [disabled]="isDisabled" (click)="acceptOrnot();" class="form-check-input" [checked]="isAgree" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                        <label class="form-check-label" for="checkboxNoLabel"> I agree to the website <a href="" routerLink="/terms">terms and conditions *</a></label>
+                        <div *ngIf="!isAgree" class="text-danger mt-3">You must accept the terms and conditions</div>
+                      </div>
+
+                      <div class="col-12 inputBtn mt-4">
+                        <button [disabled]="!isAgree || isDisabled" type="submit" class="btn ">Continue</button>
+                      </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <div *ngIf="isToastShow" class="position-fixed bottom-0 start-0 p-3" style="z-index: 5;">
+      <div class="toast show align-items-center" role="alert" aria-live="assertive" aria-atomic="true" >
+          <div class="d-flex">
+            <div class="toast-body">
+             The required Input fields can not be blank! please try to fill up required input fields it's mandotory to process further.
+           </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" (click)="hideToast();" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+      </div>
+  </div>
+
+  <div *ngIf="isProgress" class="position-fixed top-50 start-50 translate-middle p-3 pG" style="z-index: 5;">
+      <div class="d-flex justify-content-center align-items-center" style="width: 180px; height: 150px;">
+          <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+  </div>
+
+</div>

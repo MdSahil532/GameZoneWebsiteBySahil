@@ -1,0 +1,179 @@
+
+
+  form.logInForm{
+    padding-top:30px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 8px cornflowerblue;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-attachment: fixed;
+    background-image: url("../../assets/infoImg/sec.png");
+  }
+
+  .form-floating{
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 8px cornflowerblue;
+    
+  }
+  .form-control{
+      background-color: black;
+      color:whitesmoke;
+      border: none;
+      outline:none;
+  }
+  .form-control:focus{
+      width: 100%;
+      box-shadow: none !important;
+  }
+  label{
+      color: #aaa;
+  }
+
+  button.logBtn{
+      color: cornflowerblue;
+      margin-left: auto;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      margin-right: auto;
+      border: 2px solid cornflowerblue;
+      background-color: transparent;
+      padding:10px;
+      outline: none;  
+      transition: all 1s ease-in-out; 
+  }
+button.logBtn:hover{
+    color: whitesmoke;
+    box-shadow: 2px 2px 8px black;
+    background-color: cornflowerblue;   
+}
+
+button.logBtn:focus{
+    outline: none;     
+}
+.dd{
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-check-input{
+    background-color: black;
+    padding:5px;
+    border: none;
+}
+.form-check-input:focus{
+    box-shadow: none;
+}
+.form-check-input:checked{
+    border: 1px solid cornflowerblue;
+   box-shadow: 2px 2px 8px cornflowerblue;
+}
+h6.PassForgot{
+    padding: 5px;
+    color:whitesmoke;
+    font-size: 14px;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+h6.PassForgot > a{
+    text-decoration: none;
+    color: #aaa;
+}
+
+h6.PassForgot > a:hover{
+    color: cornflowerblue;
+}
+a.fb-a{
+    display: block;
+    width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:whitesmoke;;
+    font-weight: bold;
+    background-color:#4267B2;
+    text-decoration: none;
+    padding: 13px;
+    text-align: center;    
+}
+
+a.fb-a:hover i{
+    transform: rotate(360deg);
+}
+
+a.fb-a > i{
+    color: whitesmoke;
+    margin-right:8px;
+    font-size: 23px;
+    transition: all 1s ease-in;
+}
+
+a.google-a{
+    display: block;
+    width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+    font-weight: bold;
+    background-color:whitesmoke;
+    text-decoration: none;
+    padding: 13px;
+    text-align: center;    
+}
+
+a.google-a:hover > img{
+    transform: rotate(360deg);
+}
+
+a.google-a > img{
+    margin-bottom:3px; 
+    margin-right:5px;
+    transition: all 1s ease-in;
+}
+
+
+p.linkToReg{
+    text-align: right;
+    padding-right: 20px;
+    font-size: 14px;
+    color: #aaa;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p.linkToReg > a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+div.pG{
+    background-color: black;
+    border: 1.5px solid cornflowerblue;
+    box-shadow: 1px 1px 6px cornflowerblue;
+ }
+ 
+ div.toast{
+    background-color: black;
+    padding: 15px;
+    border: 1.5px solid cornflowerblue;
+    box-shadow: 1px 1px 6px cornflowerblue;
+ }
+ 
+ div.toast-body{
+     color: whitesmoke;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ div.errorToast{
+    border: 1.5px solid crimson !important;
+    box-shadow: 1px 1px 6px crimson !important;
+    position: relative;
+ }
+ button.closeBtn{
+     position: absolute;
+     top: 8px !important;
+     right: 1px !important;
+ }
+
+
+ 
+div.hasError{
+    font-size: 14px;
+    color: crimson;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

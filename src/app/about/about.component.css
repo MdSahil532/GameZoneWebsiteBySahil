@@ -1,0 +1,68 @@
+
+.contactDiv{
+    margin-top: 160px;
+    margin-bottom: 80px;
+    padding: 10px;
+    background-image: url("../../assets/infoImg/x5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.breadCum-text{
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 60px;
+    box-shadow: 2px 2px 8px cornflowerblue;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+
+.breadCum-text h2{
+    font-weight: 400;
+    color: whitesmoke;
+}
+
+div.about-d{
+    padding: 10px;
+}
+div.about-d > h4{
+    font-weight:700;
+    color: whitesmoke;
+}
+
+div.about-d > p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    color: #aaa;  
+}
+div.about-d > ul >li{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    color: #aaa;  
+}
+div.about-d > p > a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    text-decoration: none;
+    color: cornflowerblue;
+}
+p.about-p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    color: #aaa;  
+}
+p.about-p > a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    text-decoration: none;
+    color: cornflowerblue;
+   
+}
+
+
+

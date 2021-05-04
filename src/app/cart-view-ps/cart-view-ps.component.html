@@ -1,0 +1,151 @@
+<div
+  *ngIf="val == 1"
+  class="conatainer"
+  style="margin-top: 300px; margin-bottom: 200px"
+>
+  <div class="row">
+    <div class="d-flex justify-content-center col-12">
+      <div class="spinner-grow cornColor mr-15" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow cornColor mr-15" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow cornColor mr-15" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow cornColor mr-15" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow cornColor" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  *ngIf="val == 2"
+  class="container fadeIn"
+  style="margin-top: 200px; margin-bottom: 100px"
+>
+  <div class="row">
+    <div class="col-12 col-sm-10 mx-auto col-lg-6 col-md-8 mb-4">
+      <div class="mx-auto w-100 p-2 cardImg">
+        <img
+          src="../../assets/infoImg/ps Games/All/{{ imgPsProduct }}"
+          class="d-block w-100 mx-auto"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="col-12 mb-5">
+      <h3 class="w-100 text-light text-center p-3">
+        {{ namePsProduct }} (PlayStation)
+      </h3>
+    </div>
+
+    <div class="col-12 mb-70">
+      <div class="mx-auto w-100 py-5 calCulate">
+        <div class="row">
+          <div
+            class="col-11 col-sm-11 col-lg-4 col-md-10 p-2 d-lg-flex justify-content-lg-center mx-auto mb-2"
+          >
+            <h5 class="cal">
+              <span style="margin-right: 230px" class="spanCal">Price:</span
+              ><i class="fas fa-rupee-sign"></i> {{ pricePsProduct }}
+            </h5>
+          </div>
+
+          <div
+            class="col-11 col-sm-11 col-lg-4 col-md-10 p-2 d-lg-flex justify-content-lg-center mx-auto mb-2"
+          >
+            <h5 class="cal">
+              <span style="margin-right: 180px" class="spanCal2">Quantity</span
+              ><button
+                [disabled]="count == 1"
+                (click)="quantityDecreament()"
+                class="btn mr-15"
+              >
+                -</button
+              ><span style="color: cornflowerblue" class="mr-15">{{
+                count
+              }}</span
+              ><button (click)="quantityIncreament()" class="btn">+</button>
+            </h5>
+          </div>
+
+          <div
+            class="col-11 col-sm-11 col-lg-4 col-md-10 p-2 d-lg-flex justify-content-lg-center mx-auto mb-2"
+          >
+            <h5 class="cal">
+              <span style="margin-right: 200px" class="spanCal">Subtotal:</span
+              ><i class="fas fa-rupee-sign"></i> {{ pricePsProduct * count }}
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-8 col-12 col-sm-12 col-md-10 mx-auto">
+      <div class="w-100 p-2 mx-auto">
+        <div class="row">
+          <h4 class="col-12 text-center text-light mb-5 h4Cart">
+            Cart Details
+          </h4>
+
+          <div
+            class="mx-auto col-12 col-lg-10 col-md-11 col-sm-12 mb-5 cardDes py-5"
+          >
+            <h6 class="text-center p-2 mb-4">
+              <span style="margin-right: 150px">Subtotal</span
+              ><i class="fas fa-rupee-sign"></i> {{ pricePsProduct * count }}
+            </h6>
+            <hr class="hrCal mb-4 mx-auto" />
+            <h6 class="text-center p-2">
+              <span style="margin-right: 175px">Total</span
+              ><i class="fas fa-rupee-sign"></i> {{ pricePsProduct * count }}
+            </h6>
+          </div>
+          <button
+            [routerLink]="['/checkout', psN, count, pricePsProduct * count]"
+            class="btn btn-proceed d-block mx-auto col-10 col-sm-10 col-md-8 col-lg-7 mb-5"
+          >
+            Proceed
+          </button>
+          <button
+            routerLink="/play-station"
+            class="btn btn-cancel d-block mx-auto col-10 col-sm-10 col-md-8 col-lg-7"
+          >
+            Cancel<i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    *ngIf="isToastShow"
+    class="position-fixed bottom-0 start-0 p-3"
+    style="z-index: 5"
+  >
+    <div
+      class="toast show align-items-center"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Maximum 10 Quantity of product allowed</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          (click)="hideToast()"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+  </div>
+</div>

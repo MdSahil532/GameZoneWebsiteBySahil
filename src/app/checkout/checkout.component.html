@@ -1,0 +1,75 @@
+
+<div *ngIf="val==1" class="container" style="margin-top: 300px; margin-bottom: 200px;">
+
+    <div class="row">
+
+        <div  class="d-flex justify-content-center col-12">
+
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div *ngIf="val==2" class="container fadeIn" style="margin-top: 180px; margin-bottom: 100px;">
+
+    <div class="row">
+
+        <h2 class="col-12 p-3 mx-auto mb-5 checkH2">Checkout</h2>
+
+        <div class="col-12 mb-5">
+
+            <nav class="nav justify-content-center">
+
+                <a class="nav-link me-lg-5 me-md-4 me-sm-2 pStyInfo " href="#">Login</a>
+                <a class="nav-link me-lg-5 me-md-4 me-sm-2 aArrow" href="#"><i class="fas fa-arrow-right"></i></a>
+                <a class="nav-link me-lg-5 me-md-4 me-sm-2 pStyInfo" href="#">Billing Info</a>
+                <a class="nav-link me-lg-5 me-md-4 me-sm-2 aArrow" href="#"><i class="fas fa-arrow-right"></i></a>
+                <a class="nav-link pStyInfo" href="#">Payment</a>
+
+            </nav>
+
+        </div>
+
+        <h6 class="col-12 p-2 mx-auto mb-5 infoCheck">If you are a new customer, you can register or checkout as a guest. If you already have an account with us, you can login.</h6>
+
+        <div class="col-12 mb-5">
+
+            <div class="w-100 mx-auto p-2 d-flex justify-content-center align-items-center logOrReg">
+                <button routerLink="/login" class="btn btn-pay-log mr-50">Login</button>
+                <span class="mr-50 text-light"></span>
+                <button routerLink="/register" class="btn btn-pay-reg">Register</button>
+            </div>
+        </div>
+
+        <hr class="afterRole col-12 mb-5">
+
+        <div class="col-12">
+            <div class="w-10 p-2 mx-auto d-flex justify-content-center align-items-center">
+
+                <button [routerLink] ="['/billing',nam,quan,total]" class="btn btn-continueAs ">Continue as a guest<i class="fas fa-user"></i></button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

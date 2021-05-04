@@ -1,0 +1,117 @@
+
+
+<div *ngIf="val==1" class="container" style="margin-top: 300px; margin-bottom: 200px;">
+
+    <div class="row">
+
+        <div  class="d-flex justify-content-center col-12">
+
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<div *ngIf="val==2" class="container fadeIn" style="margin-bottom: 100px; margin-top: 200px;">
+    <div class="row">
+        <div class="col-12" >
+            <div class="row" style="padding:15px;">
+                <form action="" class="logInForm col-lg-8 col-12 col-md-10">
+                    <div class="row">
+                        <div class="col-12 mb-4" style="margin-top:15px;">
+                            <div class="row">
+                                <div style="margin-left: auto; margin-right: auto;" class="col-10 col-lg-6 col-md-8 col-sm-10">
+                                    <a class="fb-a"  target="_blank" href="#"><i class="fab fa-facebook"></i>  Continue With Facebook</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-5">
+                            <div class="row">
+                                <div style="margin-left: auto; margin-right: auto;" class="col-10 col-lg-6 col-md-8 col-sm-10">
+                                    <a class="google-a" (click)="authService.GoogleAuth()"  target="_blank" href="#"><img width="22px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>  Continue With Google</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr style="height:3px; color:cornflowerblue;" class="col-12 mb-5">
+                        <div class="form-floating  col-10 mb-2 col-sm-10 col-lg-7">
+                            <input (keyup)="inputEmailBlur();" (input)="emailAddress=$event.target.value" type="email" class="form-control" id="floatingInput" placeholder="Email">
+                            <label for="floatingInput">Email Address<small style="color: cornflowerblue;">*</small></label>
+                        </div>
+                        <div *ngIf="emailAddressErr != ''" class="mx-auto col-10 col-sm-10 col-lg-7 hasError">{{emailAddressErr}}</div>
+
+                        <div class="form-floating mb-2 mt-4 col-10 col-sm-10 col-lg-7">
+                            <input (keyup)="inputPassBlur();" (input)="password=$event.target.value" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password<small style="color: cornflowerblue;">*</small></label>
+                        </div>
+                        <div *ngIf="passwordErr != ''" class="mx-auto col-10 col-sm-10 col-lg-7 hasError">{{passwordErr}}</div>
+
+                        <div class="form-check col-sm-10 col-lg-7 col-10 mt-4  mb-4 dd">
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                            <label class="form-check-label" for="checkboxNoLabel">Remember me</label>
+                        </div>
+                        <div class="col-12 mb-4">
+                              <div class="row">
+                                <button (click)="onSubmitform();"  [disabled]="isDisabledBtn" class="btn logBtn mb-3 col-lg-4 col-6 col-sm-7 col-md-5" type="button">Login</button>
+                                <h6 class="PassForgot"><a href="" routerLink="/lost-password">Lost your password?</a></h6>
+                              </div>
+                        </div>  
+                          <p class="col-12 linkToReg">Don't have an account? <a href="" routerLink="../register">Register</a>.</p>
+                    </div>   
+                </form> 
+            </div>       
+        </div>
+    </div>
+
+    <div *ngIf="isToastShow" class="position-fixed bottom-0 start-0 p-3" style="z-index: 5;">
+        <div class="toast show align-items-center" role="alert" aria-live="assertive" aria-atomic="true" >
+            <div class="d-flex">
+              <div class="toast-body">
+               Pls try to solve input fields error! it's mandotory to process further.
+             </div>
+              <button type="button" class="btn-close btn-close-white me-2 m-auto" (click)="hideToast();" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    
+    <div *ngIf=" authService.logErr != '' && errorInLog " class="position-fixed top-50 start-50 translate-middle p-4" style="z-index: 5;">
+        <div class="toast errorToast show align-items-center" role="alert" aria-live="assertive" aria-atomic="true" >
+            <div class="d-flex">
+              <div class="toast-body">
+                  <h5 class="text-light mb-3">Error</h5>
+                  <p class="text-light">{{authService.logErr}}! pls try again.</p>
+              </div>
+              <button type="button" class="btn-close btn-close-white closeBtn me-2 m-auto" (click)="hideErrorMsg();" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isDisabledBtn" class="position-fixed top-50 start-50 translate-middle p-3 pG" style="z-index: 5;">
+        <div class="d-flex justify-content-center align-items-center" style="width: 180px; height: 150px;">
+            <div class="spinner-border text-light" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+    </div>
+
+
+</div>
+

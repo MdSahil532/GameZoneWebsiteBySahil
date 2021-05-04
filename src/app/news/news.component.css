@@ -1,0 +1,212 @@
+
+div.div1{
+    background-position: center;
+    background-image: url("../../assets/infoImg/news/tr.webp");
+    background-repeat:no-repeat;
+    background-size: cover;
+    box-shadow: 2px 2px 8px cornflowerblue;
+    height:307px;
+    position: relative;
+}
+
+div.div1::after,div.div2::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 1;
+}
+
+div.div1:hover::after, div.div2:hover::after{
+    visibility: visible;
+}
+
+div.div2{
+    background-position: center;
+    background-image: url("../../assets/infoImg/news/media_wallaper_2.0.jpg");
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 8px cornflowerblue;
+    background-size: cover;
+    height:307px;
+    position: relative;
+}
+div.div1:hover div.news-info p ,div.div2:hover div.news-info p{
+  display: block !important;
+}
+
+div.news-info{
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    z-index:2;
+    left: 0;
+    width: 100%;
+}
+div.news-info p, div.news-info h5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+div.news-info,div.div1,div.div2{
+    cursor: pointer;
+}
+div.news-info p{
+    display: none;
+    color: #aaa;
+    transition: all 3s ease;
+}
+
+div.small-info p{
+    color: whitesmoke;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+div.art-div{
+    box-shadow: 1px 1px 4px cornflowerblue;
+    cursor: pointer;
+    height: 100%;
+}
+
+div.art-div:hover{
+    border: 1px solid cornflowerblue;
+    box-shadow:2px 2px 8px cornflowerblue;
+}
+div.art-div:hover  div.small-info p{
+    color: cornflowerblue;
+}
+span.plat{
+    font-weight: 700;
+    color: cornflowerblue;
+}
+
+
+h2.h2Head{
+    text-shadow: 2px 2px 8px cornflowerblue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+    div.div1, div.div2{
+       height: 350px !important;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+    div.div1, div.div2{
+        height: 380px !important;
+     }
+
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    div.div1, div.div2{
+        height: 407px !important;
+     }
+
+ }
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    div.div1, div.div2{
+        height: 407px !important;
+     }
+
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) { 
+    div.div1, div.div2{
+        height: 407px !important;
+     }
+ }
+
+.scaleIn{
+    animation-name: scaleUp;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-direction: normal;
+
+}
+@keyframes scaleUp{
+    from{transform: scale(0.5);}
+    to{transform: scale(1);}
+}
+div.newGameDiv{
+    box-shadow: 2px 2px 8px cornflowerblue;
+}
+div.newGameDiv > p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+
+}
+div.newGameDiv > h4{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div.articleLatest{
+    border-bottom: 2px solid cornflowerblue;
+    cursor: pointer;
+}
+div.articleLatest:hover{
+    border: 2px solid cornflowerblue;
+    box-shadow: 2px 2px 8px cornflowerblue;
+}
+
+div.articleLatest:hover div.p-3>h4{
+    color: cornflowerblue !important;
+}
+
+div.articleLatest div.col-3::after{
+    content: '';
+    position: absolute;
+    z-index:1;
+    background-color: rgba(100, 149, 237, 0.6);
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    visibility: hidden;
+}
+div.articleLatest:hover div.col-3::after{
+    visibility: visible;
+}
+
+ul.pagination{
+    background-color: transparent;
+}
+    
+li.page-item > a.page-link{
+    background-color: transparent;
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue ;
+}
+li.page-item > a.page-link:hover{
+    background-color: cornflowerblue;
+    color:white !important;
+}
+a.pageActive{
+    background-color: cornflowerblue !important;
+    color: whitesmoke !important;
+}
+li.page-item > a.pageActive:hover{
+    background-color: cornflowerblue !important;
+    color: whitesmoke !important;
+}
+span.social{
+    font-weight: 700;
+    color: #aaa;
+}
+span.social > i{
+    color: cornflowerblue !important;
+}
+
+
+
+

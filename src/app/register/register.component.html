@@ -1,0 +1,130 @@
+
+<div *ngIf="val==1" class="container" style="margin-top: 300px; margin-bottom: 200px;">
+
+    <div class="row">
+
+        <div  class="d-flex justify-content-center col-12">
+
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div *ngIf="val==2" class="container fadeIn" style="margin-bottom: 100px; margin-top: 200px;">
+    <div class="row">
+        <div class="col-12" >
+            <div class="row" style="padding:15px;">
+
+                <form  class="logInForm col-lg-8 col-12 col-md-10">
+
+                    <div class="row">
+                        <div class="col-12 mb-4" style="margin-top:15px;">
+                            <div class="row">
+                                <div style="margin-left: auto; margin-right: auto;" class="col-10 col-lg-6 col-md-8 col-sm-10">
+                                    <a class="fb-a" target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook"></i>  Continue With Facebook</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-5">
+                            <div class="row">
+                                <div style="margin-left: auto; margin-right: auto;" class="col-10 col-lg-6 col-md-8 col-sm-10">
+                                    <a class="gl-a" target="_blank" (click)="authService.GoogleAuth()" href="#" ><img width="22px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/> Continue With Google</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="height:3px; color:cornflowerblue;" class="col-12 mb-5">
+
+                        <div class="form-floating mb-2 col-10 col-sm-10 col-lg-7">
+                            <input (keyup)="inputUserNameBlur();" (input)="userName=$event.target.value" type="text" class="form-control" id="floatingInputUser" placeholder="userName" required>
+                            <label for="floatingInputUser">User Name<small style="color: cornflowerblue;">*</small></label>
+                        </div>
+                        <div *ngIf="userNameErr != ''" class="mx-auto col-10 col-sm-10 col-lg-7 hasError">{{userNameErr}}</div>
+                       
+                        <div class="form-floating mb-2 mt-4 col-10 col-sm-10 col-lg-7">
+                            <input (keyup)="inputEmailIdBlur();" (input)="emailId=$event.target.value"  type="email" class="form-control" id="floatingInputReg" placeholder="Email" required>
+                            <label for="floatingInputReg">Email Address<small style="color: cornflowerblue;">*</small></label>
+                        </div>
+                        <div *ngIf="emailIdErr != ''" class="mx-auto col-10 col-sm-10 col-lg-7 hasError">{{emailIdErr}}</div>
+                        
+
+                        <div class="form-floating mb-2 mt-4 col-10 col-sm-10 col-lg-7 PasswordDiv">
+                            <input (keyup)="inputPasswordBlur();" (input)="passWord=$event.target.value" [type]=" (isPasswordVisible)? 'text': 'password'" class="form-control" id="floatingPasswordReg" placeholder="Password" required>
+                            <i (click)="showOrHidePassword();" [class]="(isPasswordVisible)? 'fas fa-eye-slash':'fas fa-eye'"></i>
+                            <label for="floatingPasswordReg">Password<small style="color: cornflowerblue;">*</small></label>
+                        </div>
+                        <div *ngIf="passWordErr != ''" class="mx-auto col-10 col-sm-10 col-lg-7 hasError">{{passWordErr}}</div>
+                        
+                        <div class="form-floating mt-4 mb-2 col-10 col-sm-10 col-lg-7">
+                            <input (keyup)="inputConfirmPassBlur();" type="password" (input)="confirmPasss=$event.target.value" class="form-control" id="floatingPasswordCon" placeholder="Confirm Password" required>
+                            <label for="floatingPasswordCon">Confirm Password<small style="color: cornflowerblue;">*</small></label>
+                        </div>
+                        <div *ngIf="confirmPasssErr != ''" class="mx-auto col-10 col-sm-10 col-lg-7 hasError">{{confirmPasssErr}}</div>
+
+                        <p class="acceptP mb-4 mt-4 col-10 col-sm-10 col-lg-7">By signing up you agree to our <a href="" routerLink="../privacy">privacy policy</a> and <a href="" routerLink="../terms">terms & conditions</a>.</p>
+                        <div class="col-12">
+                            <div class="row">
+
+                                <button (click)="onSubmitform();"  [disabled]="isDisabledBtn" class="btn logBtn mb-3 col-lg-4 col-6 col-sm-7 col-md-5" type="button">Register</button>
+
+                            </div>
+                        </div>  
+                    </div>   
+                </form> 
+            </div>       
+        </div>
+    </div>
+
+
+    <div *ngIf="isToastShow" class="position-fixed bottom-0 start-0 p-3" style="z-index: 5;">
+        <div class="toast show align-items-center" role="alert" aria-live="assertive" aria-atomic="true" >
+            <div class="d-flex">
+              <div class="toast-body">
+               Pls try to solve input fields error! it's mandotory to process further.
+             </div>
+              <button type="button" class="btn-close btn-close-white me-2 m-auto" (click)="hideToast();" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf=" authService.regErr != '' && errorInReg " class="position-fixed top-50 start-50 translate-middle p-4" style="z-index: 5;">
+        <div class="toast errorToast show align-items-center" role="alert" aria-live="assertive" aria-atomic="true" >
+            <div class="d-flex">
+              <div class="toast-body">
+                  <h5 class="text-light mb-3">Error</h5>
+                  <p class="text-light">{{authService.regErr}}! pls try again.</p>
+              </div>
+              <button type="button" class="btn-close btn-close-white closeBtn me-2 m-auto" (click)="hideErrorMsg();" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isDisabledBtn" class="position-fixed top-50 start-50 translate-middle p-3 pG" style="z-index: 5;">
+        <div class="d-flex justify-content-center align-items-center" style="width: 180px; height: 150px;">
+            <div class="spinner-border text-light" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+    </div>
+
+
+</div>
+
+

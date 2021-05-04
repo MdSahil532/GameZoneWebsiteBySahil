@@ -1,0 +1,322 @@
+
+<div *ngIf="val==1" class="container" style="margin-top: 300px; margin-bottom: 200px;">
+
+    <div class="row">
+
+        <div  class="d-flex justify-content-center col-12">
+
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+
+<div *ngIf="val==2" class="conatiner-fluid mb-100 fadeIn" style="margin-top:120px;">
+
+    <div class="row">
+        <div class="col-12 mx-auto psBanner bg-pattern fadeIn"></div>
+    </div>
+</div>
+
+<div *ngIf="val==2" class="container fadeIn" style="margin-bottom:80px;">   
+    <div class="row">
+        <h2 id="psHead" class="col-12 mx-auto text-center text-light mb-4 p-3"><i class="fab fa-playstation mr-10"></i>Games For PlayStation</h2>
+
+        <ul class="col-12 nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-adven-tab" data-bs-toggle="pill" data-bs-target="#pills-adven" type="button" role="tab" aria-controls="pills-adven" aria-selected="true">Adventure</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-action-tab" data-bs-toggle="pill" data-bs-target="#pills-action" type="button" role="tab" aria-controls="pills-action" aria-selected="false">Action</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-fps-tab" data-bs-toggle="pill" data-bs-target="#pills-fps" type="button" role="tab" aria-controls="pills-fps" aria-selected="false">Fps</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-rpg-tab" data-bs-toggle="pill" data-bs-target="#pills-rpg" type="button" role="tab" aria-controls="pills-rpg" aria-selected="false">Rpg</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-rca-tab" data-bs-toggle="pill" data-bs-target="#pills-rca" type="button" role="tab" aria-controls="pills-rca" aria-selected="false">Racing</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-spa-tab" data-bs-toggle="pill" data-bs-target="#pills-spa" type="button" role="tab" aria-controls="pills-spa" aria-selected="false">Sports</button>
+            </li>
+        </ul>
+          <div class="col-12 tab-content" id="pills-tabContent">
+
+            <div class="tab-pane fade show active" id="pills-adven" role="tabpanel" aria-labelledby="pills-adven-tab">
+
+                <div class="row">
+
+                    <div *ngFor="let adGame of adventureGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv" [routerLink]="['/ps-order',adGame.id]" >
+                            <img src="../../assets/infoImg/ps Games/adventure/{{adGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{adGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{adGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>215 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="tab-pane fade" id="pills-action" role="tabpanel" aria-labelledby="pills-action-tab"> 
+
+                <div class="row">
+
+                    <div *ngFor="let acGame of actionGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv"  [routerLink]="['/ps-order', acGame.id]">
+                            <img src="../../assets/infoImg/ps Games/Action/{{acGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{acGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{acGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>255 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="tab-pane fade" id="pills-fps" role="tabpanel" aria-labelledby="pills-fps-tab">
+
+                <div class="row">
+
+                    <div *ngFor="let fpsGame of fpsGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv"  [routerLink]="['/ps-order',fpsGame.id]">
+                            <img src="../../assets/infoImg/ps Games/Fps/{{fpsGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{fpsGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{fpsGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>155 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+                </div>
+                 
+            </div>
+
+            <div class="tab-pane fade" id="pills-rpg" role="tabpanel" aria-labelledby="pills-rpg-tab">
+
+                <div class="row">
+
+                    <div *ngFor="let rpgGame of rpgGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv"  [routerLink]="['/ps-order',rpgGame.id]">
+                            <img src="../../assets/infoImg/ps Games/Rpg/{{rpgGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{rpgGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{rpgGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>305 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                   
+            </div>
+
+            <div class="tab-pane fade" id="pills-rca" role="tabpanel" aria-labelledby="pills-rca-tab">
+                <div class="row">
+                    <div *ngFor="let rcGame of racingGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv" [routerLink]="[ '/ps-order',rcGame.id]">
+                            <img src="../../assets/infoImg/ps Games/Racing/{{rcGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{rcGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{rcGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>265 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-spa" role="tabpanel" aria-labelledby="pills-spa-tab">
+                <div class="row">
+
+                    <div *ngFor="let spaGame of psSportGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv" [routerLink]="[ '/ps-order',spaGame.id]" >
+                            <img src="../../assets/infoImg/ps Games/sports/{{spaGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{spaGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{spaGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>185 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+          </div>
+
+
+    </div>  
+</div>

@@ -1,0 +1,24 @@
+
+div.privacy-div{
+    padding: 10px;
+}
+
+div.privacy-div > p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    color: #aaa;  
+}
+div.privacy-div > ul > li{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    color: #aaa;  
+}
+div.privacy-div > h3{
+    font-weight:650;
+    color: whitesmoke;
+    
+}
+div.privacy-div > h5{
+    font-weight:650;
+    color: #aaa;
+}

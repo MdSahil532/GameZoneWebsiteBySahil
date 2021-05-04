@@ -1,0 +1,75 @@
+
+<div *ngIf="val==1" class="container" style="margin-top: 300px; margin-bottom: 200px;">
+
+    <div class="row">
+
+        <div  class="d-flex justify-content-center col-12">
+
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+
+<div  *ngIf="val==2" class="container fadeIn" style="margin-top: 200px; margin-bottom: 80px;">
+
+    <div class="row">
+
+      <div class="col-lg-5 col-sm-12 col-12 col-md-8 mb-4 mx-auto">
+          <div class="mx-auto w-100 p-3 tumbnail-show">
+              <img src="../../assets/infoImg/ps Games/All/{{psProduct.img}}" alt="" class="d-block mx-auto w-100">
+          </div>
+      </div>
+      <div class="col-lg-7 col-sm-12 col-12 col-md-12 mb-5 mx-auto">
+          <div class="mx-auto w-100 p-4 orderDiv" style="background-image: url('../../assets/infoImg/ps Games/All/{{psProduct.img}}');">
+              <h3 class="text-light mb-3 mt-3">{{psProduct.name}} (PlayStation)</h3>
+              <h6 class="text-light mb-4"><span>price:<br></span><i class="fas fa-rupee-sign me-1"></i>{{psProduct.price}}</h6>
+              <button class="btn btn-buy mb-4" [routerLink]="['/cart-view-ps', psProduct.name, psProduct.img, psProduct.price]">Buy</button>
+              <div class="w-100 mx-auto d-flex justify-content-start">
+                <p class="text-light p-3"><i class="fas fa-key mr-10"></i>Digital key</p>
+                <p class="text-light p-3"><i class="fas fa-envelope mr-10"></i>Instant email delivery</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-12 mb-5">
+          <div class="w-100 mx-auto">
+            <div class="row p-4 p-lg-3 p-md-3 gameDes" style="background-image: url('../../assets/infoImg/ps Games/All/{{psProduct.img}}');">
+                <h5 class="text-light p-2 p-lg-4 p-md-4 col-12 mb-3">Game Details</h5>
+                <h6 class="text-light p-lg-5 p-md-5 p-2 col-6 col-sm-6 col-md-4 col-lg-4 mb-3"><span>Initial release date:</span> <br> {{psProduct.date}}</h6>
+                <h6 class="text-light p-lg-5 p-md-5 p-2 col-6 col-sm-6 col-md-4 col-lg-4 mb-3"><span>Developers:</span><br>{{psProduct.dev}}</h6>
+                <h6 class="text-light p-lg-5 p-md-5 p-2 col-6 col-sm-6 col-md-4 col-lg-4 mb-3"><span>Publishers:</span><br>{{psProduct.pub}}</h6>
+                <h6 class="text-light p-lg-5 p-md-5 p-2 col-6 col-sm-6 col-md-4 col-lg-4 mb-3"><span>Platforms:</span><br>{{psProduct.plat}}</h6>
+                <h6 class="text-light p-lg-5 p-md-5 p-2 col-6 col-sm-6 col-md-4 col-lg-4 mb-3"><span>Genre(s):</span><br>{{psProduct.gen}}</h6>
+                <h6 class="text-light p-lg-5 p-md-5 p-2 col-6 col-sm-6 col-md-4 col-lg-4 mb-3"><span>Rating:</span><br>{{psProduct.rate}}</h6>
+            </div>
+
+        </div>
+
+      </div>
+      <div class="col-12 descripGame mb-2">
+          <h4 class="text-light p-2 mb-3">Description</h4>
+          <p class="text-light p-2">{{psProduct.des}}</p>
+      </div>
+
+      
+    </div>
+
+</div>
+
+

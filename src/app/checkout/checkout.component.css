@@ -1,0 +1,111 @@
+
+
+h2.checkH2{
+    color: whitesmoke;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 620;
+    text-align: center;
+  
+}
+
+h6.infoCheck{
+
+    color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+div.logOrReg > span{
+    background-color: cornflowerblue;
+    height: 70px;
+    padding: 1px;
+    width: 1px;
+} 
+
+button.btn-pay-log{
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 8px 30px 8px 30px;
+    transition: all 1s ease-in-out;
+}
+
+button.btn-pay-log:focus, button.btn-pay-reg:focus{
+    box-shadow: none;
+}
+
+button.btn-pay-reg{
+    border: 1.5px solid cornflowerblue;
+    color: cornflowerblue;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 8px 30px 8px 30px;
+    transition: all 1s ease-in-out;
+}
+button.btn-pay-reg:hover, button.btn-pay-log:hover{
+    background-color: cornflowerblue;
+    color: whitesmoke;
+    box-shadow: 1px 1px 6px cornflowerblue;
+}
+
+hr.afterRole{
+
+    height: 3px;
+    border:  2px solid whitesmoke;
+
+}
+
+button.btn-continueAs{
+    background-color: cornflowerblue;
+    padding: 15px 70px 15px 40px;
+    color: whitesmoke;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    display: block;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+button.btn-continueAs:hover{
+    background-color: transparent;
+    border: 1.5px solid cornflowerblue;
+    box-shadow: 1px 1px 6px cornflowerblue;
+    color: cornflowerblue;
+}
+
+button.btn-continueAs:hover i{
+    transform: rotate(360deg);
+}
+
+button.btn-continueAs i{
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    transition: all .5s ease-in-out;
+}
+
+
+
+
+button.btn-continueAs:focus{
+    box-shadow: none;
+}
+
+
+a.pStyInfo{
+    padding:15px;
+    border-radius: 3px;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+a.aArrow i{
+    color: whitesmoke;
+    padding-top: 15px;
+    pointer-events: none;
+}
+a.aArrow{
+    pointer-events: none;
+}

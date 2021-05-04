@@ -1,0 +1,12 @@
+
+
+
+
+img.profileImg{
+    display: block;
+    width: 250px;
+    height: 220px;
+    border-radius: 5px;
+    border: 1.5px solid cornflowerblue;
+
+}

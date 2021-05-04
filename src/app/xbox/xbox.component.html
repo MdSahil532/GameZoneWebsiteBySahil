@@ -1,0 +1,335 @@
+
+<div *ngIf="val==1" class="container" style="margin-top: 300px; margin-bottom: 200px;">
+
+    <div class="row">
+
+        <div  class="d-flex justify-content-center col-12">
+
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor mr-15" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow cornColor" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
+        </div>
+
+    </div>
+
+</div>
+
+
+<div *ngIf="val==2" class="conatiner-fluid mb-100 fadeIn" style="margin-top:120px;">
+
+    <div class="row">
+
+        <div class="col-12 mx-auto xboxBanner bg-pattern fadeIn"></div>
+
+    </div>
+</div>
+
+<div *ngIf="val==2" class="container fadeIn" style="margin-bottom:80px;">
+
+    <div class="row">
+
+        <h2 id="xboxHead" class="col-12 mx-auto text-center text-light mb-4 p-3"><i class="fab fa-xbox mr-10"></i>Games For Xbox</h2>
+
+        <ul class="col-12 mb-5 justify-content-center nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="xbox-adven-tab" data-bs-toggle="pill" data-bs-target="#xbox-adven" type="button" role="tab" aria-controls="xbox-adven" aria-selected="true">Adventure</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="xbox-action-tab" data-bs-toggle="pill" data-bs-target="#xbox-action" type="button" role="tab" aria-controls="xbox-action" aria-selected="false">Action</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="xbox-fps-tab" data-bs-toggle="pill" data-bs-target="#xbox-fps" type="button" role="tab" aria-controls="xbox-fps" aria-selected="false">Fps</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="xbox-rpg-tab" data-bs-toggle="pill" data-bs-target="#xbox-rpg" type="button" role="tab" aria-controls="xbox-rpg" aria-selected="false">Rpg</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="xbox-racing-tab" data-bs-toggle="pill" data-bs-target="#xbox-racing" type="button" role="tab" aria-controls="xbox-racing" aria-selected="false">Racing</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="xbox-spa-tab" data-bs-toggle="pill" data-bs-target="#xbox-spa" type="button" role="tab" aria-controls="xbox-spa" aria-selected="false">Sports</button>
+            </li>
+        </ul>
+
+        <div class="col-12 tab-content" id="pills-tabContent">
+
+            <div class="tab-pane fade show active" id="xbox-adven" role="tabpanel" aria-labelledby="xbox-adven-tab">
+
+                <div class="row">
+
+                    <div *ngFor="let adXGame of xboxAdventureGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv" [routerLink]="['/xbox-order', adXGame.id]">
+                            <img src="../../assets/infoImg/xbox games/Adventure/{{adXGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{adXGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{adXGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>195 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="tab-pane fade" id="xbox-action" role="tabpanel" aria-labelledby="xbox-action-tab">
+
+                <div class="row">
+
+                    <div *ngFor="let acXGame of xboxActionGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv" [routerLink]="['/xbox-order', acXGame.id]">
+                            <img src="../../assets/infoImg/xbox games/Action/{{acXGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{acXGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{acXGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>175 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="tab-pane fade" id="xbox-fps" role="tabpanel" aria-labelledby="xbox-fps-tab">
+
+                <div class="row">
+
+                    <div *ngFor="let fpsXGame of XboxFpsGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv" [routerLink]="['/xbox-order', fpsXGame.id]">
+                            <img src="../../assets/infoImg/xbox games/Fps/{{fpsXGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{fpsXGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{fpsXGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>205 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="xbox-rpg" role="tabpanel" aria-labelledby="xbox-rpg-tab">
+
+                <div class="row">
+
+                    <div *ngFor="let rpgXGame of xboxRpgGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv" [routerLink]="['/xbox-order', rpgXGame.id]">
+                            <img src="../../assets/infoImg/xbox games/Rpg/{{rpgXGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{rpgXGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{rpgXGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>225 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="tab-pane fade" id="xbox-racing" role="tabpanel" aria-labelledby="xbox-racing-tab">
+
+                <div class="row">
+                    <div *ngFor="let rcaXGame of xboxRacingGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv" [routerLink]="['/xbox-order', rcaXGame.id]">
+                            <img src="../../assets/infoImg/xbox games/Racing/{{rcaXGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{rcaXGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{rcaXGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>275 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="xbox-spa" role="tabpanel" aria-labelledby="xbox-spa-tab">
+
+                <div class="row">
+                    <div *ngFor="let spaXGame of xboxSportGames" class="col-6 col-sm-6 col-md-4 col-lg-4 mb-4">
+                        <div class="w-100 h-100 mx-auto p-3 productDiv" [routerLink]="['/xbox-order', spaXGame.id]">
+                            <img src="../../assets/infoImg/xbox games/sports/{{spaXGame.img}}" alt="" class="" class="mx-auto w-100 d-block mb-4 mt-2">
+                            <h5 class="text-light mb-3">{{spaXGame.name}}</h5>
+                            <p><span>Price:  </span><i class="fas fa-rupee-sign"></i>{{spaXGame.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-lg-center">
+                                <li class="page-item mr-10 active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item mr-10"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item me-1">
+                                  <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                                <li class="p-2 lText"><span>195 Items</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-lg-6 col-md-10 mt-50">
+                        <select class="form-select mx-lg-auto" aria-label="Default select example">
+                            <option class="opColor" selected>Sort by popularity</option>
+                            <option class="opColor" value="1">Sort by latest</option>
+                            <option class="opColor" value="2">Sort by price: low to high</option>
+                            <option class="opColor" value="3">Sort by price: high to low</option>
+                        </select>
+                    </div>
+
+
+                </div>
+            </div>
+
+            
+
+        </div>
+
+
+    </div>
+
+</div>

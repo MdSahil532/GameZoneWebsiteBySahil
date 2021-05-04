@@ -1,0 +1,25 @@
+
+
+div.refund-div{
+    padding: 10px;
+}
+
+div.refund-div > p , div.refund-div > ul > li{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    color: #aaa;;     
+}
+
+div.refund-div > h3{
+    font-weight: 650;  
+    color: whitesmoke;  
+}
+div.refund-div > h5{
+    font-weight: 650;  
+    color: #aaa;
+}
+
+div.refund-div > p > a{
+    text-decoration: none;
+    color: cornflowerblue;
+}

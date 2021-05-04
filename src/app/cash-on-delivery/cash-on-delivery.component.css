@@ -1,0 +1,154 @@
+
+
+
+div.cashDiv div > label.form-label{
+    color: white !important;
+}
+
+div.cashDiv div > label.form-label > i{
+    color: cornflowerblue;
+}
+
+div.cashDiv div > input.form-control{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: whitesmoke;
+    border: 1.5px solid #aaa;
+    padding: 12px;
+    outline: none;
+}
+
+div.cashDiv div > input.form-control:focus{
+    box-shadow: 2px 2px 8px cornflowerblue !important;
+    border: 1.5px solid cornflowerblue;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+h2.cashText{
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+hr.billRole{
+    min-height: 4px;
+    display: block;
+    background-color: white;
+}
+h5.payWithh5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.inputBtn button {
+    border: 1.5px solid cornflowerblue !important;
+    padding-left: 70px;
+    display:block;
+    width: 50%;
+    background-color: cornflowerblue;
+    padding-right: 70px;
+    padding-top: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    padding-bottom: 12px;
+    color: whitesmoke;
+    transition: all .5s ease-in-out;
+}
+div.inputBtn button:hover{
+    background-color: transparent;
+    color: cornflowerblue;
+}
+
+div.inputBtn button:focus{
+    box-shadow: none !important;
+}
+
+div.cashDiv div > select.form-select{
+    background-color: black;
+    color: whitesmoke;
+    border: 1.5px solid #aaa !important;
+    padding: 12px;
+}
+div.cashDiv div > select.form-select:focus{
+    box-shadow: 2px 2px 8px cornflowerblue !important;
+    border: 1.5px solid cornflowerblue !important;
+}
+
+
+.form-check-input{
+    background-color: black;
+    padding:5px;
+    border: 1px solid cornflowerblue;
+}
+.form-check-input:focus{
+    box-shadow: none;
+}
+.form-check-input:checked{
+    border: 1px solid cornflowerblue;
+   box-shadow: 2px 2px 8px cornflowerblue;
+}
+
+label.form-check-label{
+    color: whitesmoke;
+}
+label.form-check-label > a{
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+div.errorMsg{
+    font-size: 14px !important;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+    div.inputBtn button{
+        width: 50% !important;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+    div.inputBtn button{
+        width: 50% !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    div.inputBtn button{
+        width: 40% !important;
+    }
+ }
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    div.inputBtn button{
+        width: 40% !important;
+    }
+    
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) { 
+
+    div.inputBtn button{
+        width: 40% !important;
+    }
+    
+ }
+
+ div.toast{
+    background-color: black;
+    padding: 15px;
+    border: 1.5px solid cornflowerblue;
+    box-shadow: 1px 1px 6px cornflowerblue;
+ }
+
+ div.toast-body{
+     color: whitesmoke;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+ div.pG{
+    background-color: black;
+    border: 1.5px solid cornflowerblue;
+    box-shadow: 1px 1px 6px cornflowerblue;
+ }
+ 
